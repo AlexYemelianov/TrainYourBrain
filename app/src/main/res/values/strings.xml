@@ -20,6 +20,6 @@
     <string name="your_score">Your score: %1$d</string>
     <string name="again">Button</string>
     <string name="play_again">Play Again</string>
-    <string name="best_score">Your best score: %1$d</string>
+    <string name="best_score">Your best score is %1$d</string>
 
 </resources>

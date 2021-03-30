@@ -10,6 +10,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isInvisible
 import java.util.*
 
 
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var savedPref: SharedPreferences
     var bestScoreInt: Int = 0
 
+
     fun playAgain(view: View?) {
         score = 0
         questions = 0
@@ -44,8 +46,15 @@ class MainActivity : AppCompatActivity() {
         button4!!.isEnabled = true
         button5!!.isEnabled = true
         button6!!.isEnabled = true
+        button3!!.isInvisible = false
+        button4!!.isInvisible = false
+        button5!!.isInvisible = false
+        button6!!.isInvisible = false
+        sumTextView!!.isInvisible = false
+        pointsTextView!!.isInvisible = false
+
         generateQuestion()
-        object : CountDownTimer(30100, 1000) {
+        object : CountDownTimer(15900, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 timerTextView!!.text = (millisUntilFinished / 1000).toString()
             }
@@ -55,20 +64,26 @@ class MainActivity : AppCompatActivity() {
                 timerTextView!!.text = getString(R.string.sec_finish)
                 resultTextView!!.text = getString(R.string.your_score, score)
                 bestScore = findViewById(R.id.bestScore)
-                if (score > bestScoreInt) {
-                    bestScoreInt = score
-
-                }
-
-                bestScore!!.text = "Your best score is $bestScoreInt"
-
-
                 button3!!.isEnabled = false
                 button4!!.isEnabled = false
                 button5!!.isEnabled = false
                 button6!!.isEnabled = false
+                button3!!.isInvisible = true
+                button4!!.isInvisible = true
+                button5!!.isInvisible = true
+                button6!!.isInvisible = true
+                sumTextView!!.isInvisible = true
+                pointsTextView!!.isInvisible = true
+
+                if (score > bestScoreInt) {
+                    bestScoreInt = score
+                }
+                bestScore!!.text = getString(R.string.best_score, bestScoreInt)
+
             }
+
         }.start()
+
     }
 
     fun generateQuestion() {
@@ -166,17 +181,17 @@ class MainActivity : AppCompatActivity() {
         consLayout = findViewById(R.id.consLayout)
 
 
-        val settingsBtn = findViewById<ImageButton>(R.id.settingsBtn)
 
+        val settingsBtn = findViewById<ImageButton>(R.id.settingsBtn)
         settingsBtn.setOnClickListener {
             intent = Intent(this, Settings::class.java)
             finish()
             startActivity(intent)
         }
-
         savedPref = getSharedPreferences("settings", MODE_PRIVATE)
 
         val editor = savedPref.edit()
+
 
 
     }
@@ -184,7 +199,6 @@ class MainActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
 
-        // Запоминаем данные
         val editor = savedPref.edit()
         editor.putInt("Best_Score", bestScoreInt).apply()
     }

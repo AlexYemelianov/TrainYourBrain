@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Settings"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/lvlTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:text="Level"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-condensed-light" />
+
+    <Button
+        android:id="@+id/easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easy"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lvlTv"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginVertical="5dp"
+        />
+
+    <Button
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/easy"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginVertical="5dp"
+        />
+
+    <Button
+        android:id="@+id/hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hard"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/middle"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginVertical="5dp"
+        />
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        android:layout_margin="10dp"
+        />
+
+
+
+</RelativeLayout>

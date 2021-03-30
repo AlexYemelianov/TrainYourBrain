@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Train Your Brain</string>
+    <string name="startButton">Button</string>
+    <string name="button">Start!</string>
+    <string name="_30s">30s</string>
+    <string name="_0_0">0/0</string>
+    <string name="_30_12">30 + 12</string>
+    <string name="button1">Button</string>
+    <string name="button3">Button</string>
+    <string name="button4">Button</string>
+    <string name="button5">Button</string>
+    <string name="button6">Button</string>
+    <string name="display">Correct!</string>
+    <string name="play">Wrong!</string>
+    <string name="finish">The End!</string>
+    <string name="sec_finish">Time is up!</string>
+    <string name="point">%1$d/%2$d</string>
+    <string name="welcome_messages">%1$d + %2$d</string>
+    <string name="answering"> </string>
+    <string name="your_score">Your score: %1$d</string>
+    <string name="again">Button</string>
+    <string name="play_again">Play Again</string>
+    <string name="best_score">Your best score: %1$d</string>
+
+</resources>

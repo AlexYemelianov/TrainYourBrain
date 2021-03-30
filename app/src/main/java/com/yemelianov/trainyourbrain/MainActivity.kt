@@ -14,6 +14,7 @@ import androidx.core.view.isInvisible
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
     var startBtn: Button? = null
     var resultTV: TextView? = null
     var pointsTV: TextView? = null
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     var questions = 0
     var consLayout: ConstraintLayout? = null
     var bestScore: TextView? = null
-    private lateinit var savedPref: SharedPreferences
+    lateinit var savedPref: SharedPreferences
     var bestScoreInt: Int = 0
     var settingsBtn: ImageButton? = null
     var time = 10
@@ -84,16 +85,13 @@ class MainActivity : AppCompatActivity() {
                     bestScoreInt = score
                 }
                 bestScore!!.text = getString(R.string.best_score, bestScoreInt)
-
             }
-
         }.start()
-
     }
 
     fun generateQuestion() {
         val intent = intent
-        x = intent.getIntExtra("x",21)
+        x = intent.getIntExtra("x", 21)
         val rand = Random()
         val a = rand.nextInt(x)
         val b = rand.nextInt(x)
@@ -176,6 +174,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         startBtn = findViewById(R.id.startButton)
         button3 = findViewById(R.id.button3)
         button4 = findViewById(R.id.button4)
@@ -187,8 +186,6 @@ class MainActivity : AppCompatActivity() {
         timerTV = findViewById(R.id.timerTextView)
         playAgainBtn = findViewById(R.id.playAgainButton)
         consLayout = findViewById(R.id.consLayout)
-
-
 
         settingsBtn = findViewById(R.id.settingsBtn)
         settingsBtn!!.setOnClickListener {

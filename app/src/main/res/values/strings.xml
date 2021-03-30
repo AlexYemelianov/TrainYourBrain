@@ -21,5 +21,7 @@
     <string name="again">Button</string>
     <string name="play_again">Play Again</string>
     <string name="best_score">Your best score is %1$d</string>
+    <string name="hint">Enter</string>
+    <string name="enter_time_in_seconds">Enter time in seconds:</string>
 
 </resources>

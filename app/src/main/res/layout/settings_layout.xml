@@ -67,6 +67,29 @@
         android:layout_margin="10dp"
         />
 
+    <TextView
+        android:id="@+id/editTextHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hard"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/enter_time_in_seconds"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/timeEditText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editTextHint"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimaryDark"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint"/>
 
 
 </RelativeLayout>

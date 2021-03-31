@@ -23,5 +23,10 @@
     <string name="best_score">Your best score is %1$d</string>
     <string name="hint">Enter</string>
     <string name="enter_time_in_seconds">Enter time in seconds:</string>
+    <string name="hard_level">Hard</string>
+    <string name="level">Level</string>
+    <string name="easy_level">Easy</string>
+    <string name="middle_level">Middle</string>
+    <string name="edit_theme">Set theme</string>
 
 </resources>

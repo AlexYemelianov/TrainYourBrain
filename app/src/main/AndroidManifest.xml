@@ -10,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrainYourBrain">
+        <activity android:name=".authentication.Home"/>
+        <activity android:name=".authentication.SignIn" />
+        <activity android:name=".authentication.EmailPasswordAuthentication" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -21,9 +24,8 @@
         </activity>
         <activity
             android:name=".Settings"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" />
 
-        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -4,7 +4,7 @@
     <string name="button">Start!</string>
     <string name="_30s">30s</string>
     <string name="_0_0">0/0</string>
-    <string name="_30_12">30 + 12</string>
+    <string name="_10_21">10 + 21</string>
     <string name="button1">Button</string>
     <string name="button3">Button</string>
     <string name="button4">Button</string>
@@ -28,5 +28,14 @@
     <string name="easy_level">Easy</string>
     <string name="middle_level">Middle</string>
     <string name="edit_theme">Set theme</string>
+    <string name="log_out"><u>Log out</u></string>
+    <string name="log_in"><u>Log in</u></string>
+    <string name="create_account">Create your account</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="confirm_password">Confirm your password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 
 </resources>

@@ -9,6 +9,28 @@
     android:background="@drawable/background">
 
     <TextView
+        android:id="@+id/userName"
+        android:text="@string/log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/logOutBtn"
+        android:text="@string/log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="45dp"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
         android:id="@+id/lvlTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

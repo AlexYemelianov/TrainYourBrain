@@ -2,30 +2,35 @@ package com.yemelianov.trainyourbrain
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.yemelianov.trainyourbrain.authentication.EmailPasswordAuthentication
+import com.yemelianov.trainyourbrain.authentication.FirebaseObject
+import com.yemelianov.trainyourbrain.authentication.SignIn
+import com.yemelianov.trainyourbrain.db.DbManager
+import kotlinx.android.synthetic.main.settings_layout.*
+
 
 class Settings : AppCompatActivity() {
+
+    private val dbManager = DbManager(this)
+    private var dataList: ArrayList<String>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_layout)
 
+        dbManager.openDB()
+        dataList = dbManager.readDB()
         val timeED: EditText = findViewById(R.id.timeEditText)
         var time = 1
-        var themeBtn: Button? = null
-
         intent = Intent(this, MainActivity::class.java)
 
-        themeBtn = findViewById(R.id.setThemeBtn)
-
         checkTheme()
-        themeBtn.setOnClickListener { chooseThemeDialog() }
+        setThemeBtn.setOnClickListener { chooseThemeDialog() }
 
         val easyBtn = findViewById<Button>(R.id.easy)
         easyBtn.setOnClickListener {
@@ -71,6 +76,16 @@ class Settings : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val logInBtn = findViewById<TextView>(R.id.userName)
+        logInBtn.setOnClickListener {
+            intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
+        }
+
+        logOutBtn.setOnClickListener {
+            FirebaseObject.firebaseAuth.signOut()
+            Toast.makeText(this, "signed out", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
@@ -109,6 +124,7 @@ class Settings : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
     }
+
     private fun checkTheme() {
         when (MyPreferences(this).darkMode) {
             0 -> {
@@ -125,4 +141,12 @@ class Settings : AppCompatActivity() {
             }
         }
     }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dbManager.closeDB()
+    }
+
+
 }

@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isInvisible
 import java.util.*
+import kotlin.collections.ArrayList
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -175,6 +177,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         startBtn = findViewById(R.id.startButton)
         button3 = findViewById(R.id.button3)
         button4 = findViewById(R.id.button4)
@@ -196,8 +199,6 @@ class MainActivity : AppCompatActivity() {
         savedPref = getSharedPreferences("settings", MODE_PRIVATE)
 
         val editor = savedPref.edit()
-
-
 
     }
 

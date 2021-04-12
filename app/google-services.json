@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "549196132598",
+    "firebase_url": "https://trainyourbrain-a8353-default-rtdb.firebaseio.com",
+    "project_id": "trainyourbrain-a8353",
+    "storage_bucket": "trainyourbrain-a8353.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549196132598:android:103c82bf33787e98063cd7",
+        "android_client_info": {
+          "package_name": "com.example.trainyourbrain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549196132598-dbp9k72fcg3gfjh73ri70ur4mhmn0t5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp9hL5Xe08rb6O7wIxMggJD3Szj9XuGjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549196132598-dbp9k72fcg3gfjh73ri70ur4mhmn0t5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549196132598:android:b4c8c730f0a5371d063cd7",
+        "android_client_info": {
+          "package_name": "com.yemelianov.trainyourbrain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549196132598-dbp9k72fcg3gfjh73ri70ur4mhmn0t5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp9hL5Xe08rb6O7wIxMggJD3Szj9XuGjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549196132598-dbp9k72fcg3gfjh73ri70ur4mhmn0t5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
